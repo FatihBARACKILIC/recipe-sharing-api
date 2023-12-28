@@ -1,7 +1,13 @@
 {
   "name": "recipe-sharing-api",
+  "version": "1.0.0",
   "module": "src/index.ts",
   "type": "module",
+  "author": "Fatih BARAÇKILIÇ",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FatihBARACKILIC/recipe-sharing-api"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
