@@ -31,5 +31,6 @@
         5432
     ],
     "postCreateCommand": "bun install",
-    "shutdownAction": "none"
+    "shutdownAction": "none",
+    "onCreateCommand": "service postgresql start"
 }
