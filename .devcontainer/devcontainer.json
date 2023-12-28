@@ -1,0 +1,34 @@
+{
+    "name": "Bun & PostgreSQL",
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": "..",
+        "args": {}
+    },
+    "features": {
+        "ghcr.io/itsmechlark/features/postgresql:1": {},
+        "ghcr.io/devcontainers/features/git:1": {}
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash"
+            },
+            "extensions": [
+                "oven.bun-vscode",
+                "streetsidesoftware.code-spell-checker",
+                "intellsmi.comment-translate",
+                "esbenp.prettier-vscode",
+                "humao.rest-client",
+                "rangav.vscode-thunder-client",
+                "Gruntfuggly.todo-tree",
+                "streetsidesoftware.code-spell-checker-turkish"
+            ]
+        }
+    },
+    "forwardPorts": [
+        8080
+    ],
+    "postCreateCommand": "bun install",
+    "shutdownAction": "none"
+}
