@@ -22,7 +22,10 @@
                 "humao.rest-client",
                 "rangav.vscode-thunder-client",
                 "Gruntfuggly.todo-tree",
-                "streetsidesoftware.code-spell-checker-turkish"
+                "streetsidesoftware.code-spell-checker-turkish",
+                "Prisma.prisma",
+                "ms-azuretools.vscode-docker",
+                "dbaeumer.vscode-eslint"
             ]
         }
     },
