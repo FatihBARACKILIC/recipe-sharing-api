@@ -9,13 +9,13 @@ const commentController = (app: Elysia) => {
   app.post("/:recipeId/create-comment", async (context: Context) => {
     try {
       const authHeader = context.headers["authorization"];
-      const token = authHeader && authHeader.split(" ")[1];
+      // const token = authHeader && authHeader.split(" ")[1];
       const { recipeId = "0" } = context.params;
 
-      if (!token) throw new Error("Invalid Token");
+      if (!authHeader) throw new Error("Invalid Token");
       else if (recipeId === "0") throw new Error("Invalid Recipe");
 
-      const verifiedToken = verifyToken(token);
+      const verifiedToken = verifyToken(authHeader);
       const { body } = context.body as { body: string };
 
       const newComment = await createComment({
@@ -32,7 +32,7 @@ const commentController = (app: Elysia) => {
     }
   });
 
-  app.post("/:recipeId/comments", async (context: Context) => {
+  app.get("/:recipeId/comments", async (context: Context) => {
     try {
       const { recipeId = "0" } = context.params;
 
