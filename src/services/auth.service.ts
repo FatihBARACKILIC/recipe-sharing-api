@@ -1,4 +1,3 @@
-import { error } from "elysia";
 import jwt from "jsonwebtoken";
 
 const verifyToken = (token: string): { id: number; email: string } => {
