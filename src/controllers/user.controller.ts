@@ -29,7 +29,7 @@ const userController = (app: Elysia) => {
         password: string;
       };
 
-      const loggedInUser = login({ email, password });
+      const loggedInUser = await login({ email, password });
 
       return loggedInUser;
     } catch (error: any) {
