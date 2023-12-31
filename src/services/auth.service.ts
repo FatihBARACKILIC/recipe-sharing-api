@@ -1,10 +1,10 @@
 import { error } from "elysia";
 import jwt from "jsonwebtoken";
 
-const verifyToken = (token: string) => {
+const verifyToken = (token: string): { id: number; email: string } => {
   try {
     const payload = jwt.verify(token, process.env.JWT_SECRET as string);
-    return payload;
+    return payload as { id: number; email: string };
   } catch (error: any) {
     throw new Error("Invalid token");
   }
