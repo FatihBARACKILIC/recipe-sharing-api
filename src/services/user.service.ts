@@ -54,3 +54,5 @@ const login = async (data: { email: string; password: string }) => {
     throw error;
   }
 };
+
+export { createNewUser, login };
