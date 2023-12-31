@@ -15,7 +15,7 @@ const createRecipe = async (data: {
   return recipe;
 };
 
-const getAllRecipe = async () => {
+const getAllRecipes = async () => {
   const recipes = await prisma.recipe.findMany({
     include: {
       user: true,
@@ -39,4 +39,4 @@ const getRecipeById = async (id: number) => {
   return recipe;
 };
 
-export { createRecipe, getAllRecipe, getRecipeById };
+export { createRecipe, getAllRecipes, getRecipeById };
