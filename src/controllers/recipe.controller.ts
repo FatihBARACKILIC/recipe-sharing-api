@@ -29,7 +29,7 @@ const recipeController = (app: Elysia) => {
     }
   });
 
-  app.post("/recipies", async () => {
+  app.get("/recipies", async () => {
     try {
       const recipies = await getAllRecipes();
       return recipies;
