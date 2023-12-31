@@ -1,0 +1,133 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Recipe Sharing API",
+    "dateExported": "2023-12-31T21:45:43.878Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "c6b1d101-caeb-4f38-9985-04d9b6cf7361",
+            "colId": "5ff89af8-bd6d-4116-ae7c-a06f3ce6b334",
+            "containerId": "",
+            "name": "signup",
+            "url": "http://localhost:4040/signup",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-12-31T21:37:53.212Z",
+            "modified": "2023-12-31T21:44:06.592Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Ali Veli\",\n  \"email\": \"ali.veli@mail.com\",\n  \"password\": \"ali123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5764b3ed-5f46-4831-b40a-1d6de1d1d400",
+            "colId": "5ff89af8-bd6d-4116-ae7c-a06f3ce6b334",
+            "containerId": "",
+            "name": "login",
+            "url": "http://localhost:4040/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-12-31T21:38:00.343Z",
+            "modified": "2023-12-31T21:44:43.618Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"ali.veli@mail.com\",\n  \"password\": \"ali123\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "176dadea-1004-4731-a9d9-97a849ca6f2d",
+            "colId": "5ff89af8-bd6d-4116-ae7c-a06f3ce6b334",
+            "containerId": "",
+            "name": "create-recipe",
+            "url": "http://localhost:4040/create-recipe",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-12-31T21:38:05.159Z",
+            "modified": "2023-12-31T21:45:01.308Z",
+            "headers": [
+                {
+                    "name": "authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhbGkudmVsaUBtYWlsLmNvbSIsImlhdCI6MTcwNDA1OTA4MywiZXhwIjoxNzA0MTQ1NDgzfQ.wZsm2atK5xTs8WZM1xcROl1FRu1gpEJoniJSsXQAoVY"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Lahmacum\",\n  \"body\": \"Lahmacun Tarifi...\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a6723a7f-5313-456c-84a6-05a0046c8888",
+            "colId": "5ff89af8-bd6d-4116-ae7c-a06f3ce6b334",
+            "containerId": "",
+            "name": "recipes",
+            "url": "http://localhost:4040/recipes",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-12-31T21:38:09.522Z",
+            "modified": "2023-12-31T21:38:09.522Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "dfd5d8e4-a1b4-4169-a8c9-d73de19732d8",
+            "colId": "5ff89af8-bd6d-4116-ae7c-a06f3ce6b334",
+            "containerId": "",
+            "name": "create-comment",
+            "url": "http://localhost:4040/2/create-comment",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-12-31T21:38:14.558Z",
+            "modified": "2023-12-31T21:45:25.344Z",
+            "headers": [
+                {
+                    "name": "authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJhbGkudmVsaUBtYWlsLmNvbSIsImlhdCI6MTcwNDA1OTA4MywiZXhwIjoxNzA0MTQ1NDgzfQ.wZsm2atK5xTs8WZM1xcROl1FRu1gpEJoniJSsXQAoVY"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"body\": \"Teşekkürler\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f1f69da4-e5c5-4c4d-aaa6-dc471c1038d2",
+            "colId": "5ff89af8-bd6d-4116-ae7c-a06f3ce6b334",
+            "containerId": "",
+            "name": "comments",
+            "url": "http://localhost:4040/2/comments",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-12-31T21:38:20.816Z",
+            "modified": "2023-12-31T21:38:20.816Z",
+            "headers": [
+                {
+                    "name": "authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJmYXRpaGI0NjlAZ21haWwuY29tIiwiaWF0IjoxNzA0MDU4MDE0LCJleHAiOjE3MDQxNDQ0MTR9.PM5Uo41_AuymkNBVFrRwzgW-VuyJDtmO2krBedH4PW8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"body\": \"Tarifi uyguladım çok iyi teşekkürler\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
