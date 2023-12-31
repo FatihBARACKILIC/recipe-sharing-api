@@ -8,6 +8,10 @@
     "type": "git",
     "url": "https://github.com/FatihBARACKILIC/recipe-sharing-api"
   },
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "dev": "bun --watch run src/index.ts"
+  },
   "devDependencies": {
     "@types/bun": "latest",
     "@types/jsonwebtoken": "^9.0.5"
