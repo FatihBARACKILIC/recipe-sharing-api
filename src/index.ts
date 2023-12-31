@@ -10,11 +10,6 @@ const app = new Elysia();
 app.use(userController as any);
 app.use(recipeController as any);
 app.use(commentController as any);
-app.all("/", () => {
-  console.log("Hello, World!");
-
-  return { message: "Hello, World!" };
-});
 
 const port = process.env.PORT ?? 4040;
 

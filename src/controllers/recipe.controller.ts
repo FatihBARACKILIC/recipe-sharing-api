@@ -1,5 +1,6 @@
 import Elysia, { t, type Context } from "elysia";
 import { createRecipe, getAllRecipes } from "../services/recipe.service";
+import { verifyToken } from "../services/auth.service";
 
 const recipeController = (app: Elysia) => {
   app.post("/create-recipe", async (context: Context) => {
@@ -9,16 +10,17 @@ const recipeController = (app: Elysia) => {
 
       if (!token) throw new Error("Invalid Token");
 
-      const { title, body, userId } = context.body as {
+      const verifiedToken = verifyToken(token);
+
+      const { title, body } = context.body as {
         title: string;
         body: string;
-        userId: number;
       };
 
       const newRecipe = await createRecipe({
         title,
         body,
-        userId,
+        userId: verifiedToken.id,
       });
 
       return newRecipe;
